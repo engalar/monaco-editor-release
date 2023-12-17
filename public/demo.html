@@ -1,0 +1,27 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpack with Monaco Editor</title>
+  <link rel="stylesheet" href="/vs/styles.css">
+</head>
+
+<body style="height: 100%;margin: 0;">
+  <div id="editor" style="height: 100%;"></div>
+  <script src="https://cdn.jsdelivr.net/npm/dojo@1.17.3/dojo.js"></script>
+  <script>
+    // on dom ready
+    require(['/vs/monaco.js'], function () {
+      var editor = monaco.editor.create(document.getElementById('editor'), {
+        value: 'console.log("hello")',
+        language: "javascript",
+        automaticLayout: true,
+      });
+    });
+  </script>
+</body>
+
+</html>
