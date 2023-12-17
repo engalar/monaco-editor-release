@@ -8,6 +8,7 @@ module.exports = {
   output: {
     filename: "monaco.js",
     path: path.resolve(__dirname, "dist"),
+    libraryTarget: "umd",
   },
   mode: "production",
   resolve: {
